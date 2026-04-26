@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+    <h1>Quotes</h1>
+
+    <% for (let i of quotes) { %>
+        <a href="/updateQuote?quoteId=<%= i.quoteId %>">Edit</a>
+        <a href="/deleteQuote?quoteId=<%= i.quoteId %>">Delete</a>
+        <%= i.quote %> <br>
+    <% } %>
+</body>
+</html>

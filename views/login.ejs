@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+
+    <h1>Login</h1>
+
+    <% if (typeof loginError !== 'undefined') { %>
+        <p style="color:red;"><%= loginError %></p>
+    <% } %>
+
+    <form action="/loginProcess" method="POST">
+        Username:
+        <input type="text" name="username" required>
+        <br><br>
+
+        Password:
+        <input type="password" name="password" required>
+        <br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+</html>

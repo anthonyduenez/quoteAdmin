@@ -1,0 +1,133 @@
+/* Reset + base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+}
+
+/* Center content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+nav form {
+    margin-left: auto;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Forms */
+form {
+    margin-top: 15px;
+}
+
+input,
+select,
+textarea,
+button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* Buttons */
+button {
+    width: auto;
+    cursor: pointer;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+/* Lists (quotes/authors) */
+.item {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.item a {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+/* Blockquote */
+blockquote {
+    margin: 15px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #0077cc;
+    background-color: #f0f6ff;
+    border-radius: 4px;
+}
+
+/* Links */
+a {
+    color: #0077cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Small spacing helpers */
+.spaced {
+    margin-top: 20px;
+}

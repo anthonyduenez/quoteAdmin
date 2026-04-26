@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+    <h1>Update Quote</h1>
+
+    <form action="/updateQuote" method="POST">
+        <input type="hidden" name="quoteId" value="<%= quoteInfo[0].quoteId %>">
+
+        Quote:
+        <textarea name="quote"><%= quoteInfo[0].quote %></textarea><br>
+
+        Category:
+        <select name="category">
+            <% for (let i of categoryList) { %>
+                <option value="<%= i.category %>" <%= quoteInfo[0].category == i.category ? "selected" : "" %>>
+                    <%= i.category %>
+                </option>
+            <% } %>
+        </select>
+        <br>
+
+        Author:
+        <select name="authorId">
+            <% for (let i of authorList) { %>
+                <option value="<%= i.authorId %>" <%= quoteInfo[0].authorId == i.authorId ? "selected" : "" %>>
+                    <%= i.firstName %> <%= i.lastName %>
+                </option>
+            <% } %>
+        </select>
+        <br>
+
+        <button>Update Quote!</button>
+    </form>
+</body>
+</html>

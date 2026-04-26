@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+    <h1>Adding a New Quote</h1>
+
+    <form action="/addQuote" method="POST">
+        Quote:
+        <textarea name="quote"></textarea><br>
+
+        Category:
+        <select name="category">
+            <% for (let i of categoryList) { %>
+                <option value="<%= i.category %>"><%= i.category %></option>
+            <% } %>
+        </select>
+        <br>
+
+        Author:
+        <select name="authorId">
+            <% for (let i of authorList) { %>
+                <option value="<%= i.authorId %>"><%= i.firstName %> <%= i.lastName %></option>
+            <% } %>
+        </select>
+        <br>
+
+        <button>Add Quote!</button>
+    </form>
+</body>
+</html>

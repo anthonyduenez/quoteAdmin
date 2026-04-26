@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+
+    <h1>Delete Author</h1>
+
+    <p>
+        Are you sure you want to delete 
+        <strong><%= authorInfo[0].firstName %> <%= authorInfo[0].lastName %></strong>?
+    </p>
+
+    <form action="/deleteAuthor" method="POST">
+        <input type="hidden" name="authorId" value="<%= authorInfo[0].authorId %>">
+
+        <button type="submit">Yes, Delete</button>
+    </form>
+
+    <br>
+
+    <a href="/authors">Cancel</a>
+
+</body>
+</html>
